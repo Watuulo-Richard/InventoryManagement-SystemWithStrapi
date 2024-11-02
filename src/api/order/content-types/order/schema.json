@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "Order"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "orderNumber": {
+      "type": "integer",
+      "unique": true
+    },
+    "name": {
+      "type": "string"
+    },
+    "quantity": {
+      "type": "integer"
+    },
+    "location": {
+      "type": "string"
+    },
+    "orderStatus": {
+      "type": "enumeration",
+      "enum": [
+        "Pending",
+        "Approved",
+        "Declined"
+      ],
+      "default": "Pending"
+    }
+  }
+}
